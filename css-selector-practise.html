@@ -26,19 +26,19 @@
         color:red;
       }
 
-      .a>span:first-child{
+      .a>span:first-child {
         color:green;
       }
 
-      .a>span:last-child{
+      .a>span:last-child {
         color:blue;
       }
 
-      a:visited{
+      a:visited {
         color:orange;
       }
 
-      a:link{
+      a:link {
         color:pink;
       }
 
@@ -54,22 +54,32 @@
         font-size: 30px;
       }
 
-      div ul.a li:nth-of-type(n+4)~li:nth-of-type(n+7) {
+      div.a ul li:nth-of-type(n+3)~li:nth-of-type(-n+7) {
         color:red;
       }
 
-      div ul.b li:nth-of-type(n+25) {
+      div.b ul li:nth-of-type(-n+25) {
         color:red;
       }
 
-      div ul.b li:nth-of-type(n+35)~li:nth-of-type(n+50) {
+      div.b ul li:nth-of-type(n+35)~li:nth-of-type(-n+50) {
         color:blue;
       }
 
-      div ul.b li:nth-of-type(n+65) {
+      div.b ul li:nth-of-type(n+65) {
         color:green;
       }
 
+      div.prime ul li:nth-child(2n+4) {
+        color:blue;
+      }
+      div.prime ul li:not(:nth-child(2n+4)) {
+        color:red;
+      }
+      
+      div.prime ul li:first-child {
+        color:black;
+      }
     </style>
   </head>
   <body>
