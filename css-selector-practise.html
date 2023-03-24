@@ -74,7 +74,20 @@
       div.prime ul li:nth-child(2n+4) {
         color:blue;
       }
-      div.prime ul li:not(:nth-child(2n+4)) {
+
+      div.prime ul li:nth-child(3n+6) {
+        color:blue;
+      }
+
+      div.prime ul li:nth-child(5n+25) {
+        color:blue;
+      }
+
+      div.prime ul li:nth-child(7n+49) {
+        color:blue;
+      }
+
+      div.prime ul li:not(:nth-child(2n+4)):li:not(:nth-child(3n+6)):li:not(:nth-child(5n+25)):i:not(:nth-child(7n+49)){
         color:red;
       }
       
