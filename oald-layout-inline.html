@@ -7,6 +7,228 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <style>
+    html {
+      height: 100%;
+      min-width: 1000px;
+    }
+
+    body {
+      margin: 0px;
+      height: 100%;
+    }
+
+    .all {
+      font-size: 0;
+      height: 100%;
+      display: flow-root;
+    }
+
+
+    h2 {
+      padding-left: 20px;
+      font-size: initial;
+    }
+
+    .aside {
+      display: inline-block;
+      font-size: initial;
+      text-align: center;
+      border-right: 1px black solid;
+      background-color: orange;
+      width: 200px;
+      height: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    form {
+      overflow: auto;
+      height: calc(100% - 70px);
+    }
+
+    ul {
+      font-size: initial;
+      text-align: left;
+      list-style: none;
+
+      box-sizing: border-box;
+      margin: 0;
+
+    }
+
+
+    #word {
+      margin-right: 2px;
+      width: 120px;
+      border-radius: 10px;
+    }
+
+
+    a {
+      text-decoration: none;
+    }
+
+
+    .Word {
+      display: inline-block;
+      background-color: pink;
+      border-right: 1px black solid;
+      height: 100%;
+      width: calc(100% - 600px);
+      vertical-align: top;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+
+    #Word-h2 {
+      font-size: initial;
+      border-bottom: 1px solid black;
+      margin-bottom: 0px;
+      padding-bottom: 20px;
+    }
+
+
+    #W_main {
+      display: inline-block;
+      font-size: initial;
+      padding: 20px;
+      height: calc(100% - 52px);
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+
+
+    .Vocabulary {
+      display: inline-block;
+      font-size: initial;
+      text-align: center;
+      border-right: 1px black solid;
+      background-color: purple;
+      width: 200px;
+      height: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      vertical-align: top;
+    }
+
+
+    .History {
+      display: inline-block;
+      font-size: initial;
+      text-align: center;
+      background-color: rgb(228, 239, 168);
+      width: 200px;
+      height: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      vertical-align: top;
+    }
+
+
+
+  </style>
+
+</head>
+
+<body>
+  <div class="all">
+    <span class="aside">
+      <h2>OALD Se7en</h2>
+      <div>
+        <input type="text" id="word">
+        <button>BAI</button>
+      </div>
+      <form action="" name="aside">
+        <ul>
+          <li><a href="">word1</a></li>
+          <li><a href="">word2</a></li>
+          <li><a href="">word3</a></li>
+          <li><a href="">word4</a></li>
+          <li><a href="">word5</a></li>
+          <li><a href="">word6</a></li>
+          <li><a href="">word7</a></li>
+          <li><a href="">word8</a></li>
+          <li><a href="">word9</a></li>
+          <li><a href="">word10</a></li>
+          <li><a href="">word11</a></li>
+          <li><a href="">word12</a></li>
+          <li><a href="">word13</a></li>
+          <li><a href="">word14</a></li>
+          <li><a href="">word15</a></li>
+          <li><a href="">word16</a></li>
+          <li><a href="">word17</a></li>
+          <li><a href="">word18</a></li>
+          <li><a href="">word19</a></li>
+          <li><a href="">word20</a></li>
+          <li><a href="">word21</a></li>
+          <li><a href="">word22</a></li>
+          <li><a href="">word23</a></li>
+          <li><a href="">word24</a></li>
+          <li><a href="">word25</a></li>
+          <li><a href="">word26</a></li>
+          <li><a href="">word27</a></li>
+          <li><a href="">word28</a></li>
+          <li><a href="">word29</a></li>
+          <li><a href="">word30</a></li>
+          <li><a href="">word31</a></li>
+          <li><a href="">word32</a></li>
+          <li><a href="">word33</a></li>
+          <li><a href="">word34</a></li>
+          <li><a href="">word35</a></li>
+          <li><a href="">word36</a></li>
+          <li><a href="">word37</a></li>
+          <li><a href="">word38</a></li>
+          <li><a href="">word39</a></li>
+          <li><a href="">word40</a></li>
+          <li><a href="">word41</a></li>
+          <li><a href="">word42</a></li>
+          <li><a href="">word43</a></li>
+          <li><a href="">word44</a></li>
+          <li><a href="">word45</a></li>
+          <li><a href="">word46</a></li>
+          <li><a href="">word47</a></li>
+          <li><a href="">word48</a></li>
+          <li><a href="">word49</a></li>
+          <li><a href="">word50</a></li>
+        </ul>
+      </form>
+    </span>
+    <span class="Word">
+      <h2 id="Word-h2">fantasy</h2>
+      <div id="W_main">
+        <p>1.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores expedita nulla, alias atque quasi, esse
+          voluptas
+          illo sed et quam doloribus, minus quia commodi ex earum magnam? Magnam, eveniet repellat?
+          Commodi quod nihil hic. Vero architecto quae libero delectus veniam, recusandae accusamus ratione possimus
+          assumenda
+          iure dolore maiores odit autem cumque similique ullam, numquam suscipit. Praesentium placeat asperiores
+          expedita
+          sint?</p>
+        <p>2.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, fugit sequi repudiandae possimus
+          consequuntur maxime?</p>
+        <p>3.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae inventore odit nulla
+          excepturi
+          necessitatibus reiciendis dolore, in repudiandae. Maiores, magnam sequi.</p>
+        <p>4.Lorem ipsum dolor sit.</p>
+        <p>5.Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam doloribus minus cum quam sint amet error
+          quasi. Officia optio, sunt consectetur voluptate labore debitis amet corporis, voluptatum molestias dolore
+          beatae id facilis quia provident necessitatibus et obcaecati, maxime dolorum quibusdam?</p>
+        <p>6.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempora accusantium itaque laboriosam natus
+          necessitatibus consequuntur. Asperiores tempore repudiandae ea odit soluta facere ullam! Nemo obcaecati illo
+          accusantium, assumenda tempore iure rem commodi!</p>
+        <p>7.Lorem ipsum dolor sit amet.</p>
+      </div>
+    </span>
+    <span class="Vocabulary">
+      <h2>Vocabulary</h2>
+    </span>
+    <span class="History">
+      <h2>History</h2>
+    </span>
+  </div>
+
 </body>
+
 </html>
