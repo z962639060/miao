@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    box-shadow: inset  0 0 1px rgb(20, 20, 20);
+  }
+  html {
+    zoom: 2;
+    background-color: rgb(109, 104, 104);
+  }
+  ul {
+    padding:0;
+    list-style: none;
+    background-color: rgb(146, 146, 146);
+  }
+  .menu {
+    font-size: 0;
+  }
+  .menu > li  {
+    font-size: 16px;
+    display: inline-block;
+  }
+  .menu li:hover  {
+    background-color: rgb(246, 224, 135);
+  }
+  .menu li {
+    position: relative;
+    white-space:nowrap;
+  }
+  .menu ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+  }
+  .menu ul li {
+    display: none;
+    padding-right: 6em;
+  }
+  .menu ul ul {
+    top:0;
+    left:100%;
+  }
+  .menu1 {
+    display: inline-block;
+  }
+  .menu li:hover>ul>li {
+    display: block;  
+  }
+  .menu li[data-shortcut]::after {
+   content: attr(data-shortcut);
+   position: absolute;
+   right: 5px;
+   margin-right: 10px;
+  }
+
+  .menu ul li ul::before {
+   content: '>';
+   position: absolute;
+   right: 100%;
+   margin-right: 5px;
+   background-color: rgb(103, 176, 231);
+  }
+</style>
+<body>
+  <ul class="menu">
+    <li>文件
+      <ul>
+        <li data-shortcut="Ctrl+N">
+          <span>新建文本文件</span>
+        </li>
+        <li data-shortcut="Ctrl+shift+N">
+            <span class="menu1">新建窗口</span>
+        </li>
+        <li>打开其他文件
+        <ul>
+          <li>歪比巴卜？</li>
+          <li>歪比歪比？</li>
+          <li>玛卡巴卡</li>
+        </ul>
+        </li>
+        <li data-shortcut="ctrl+S">
+          <span class="menu1">保存</span>
+        </li>  
+      </ul>
+    </li>
+    <li>编辑</li>
+    <li>选择</li>
+    <li>查看</li>
+  </ul>
+</body>
+</html>
