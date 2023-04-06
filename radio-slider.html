@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+.aozy {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border: 1px solid;
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+  transition: 1s;
+  width: 100%;
+  height: 100%;
+  left: 100%;
+}
+  input {
+    display: none;
+  }
+  input:checked + * + * + * + * {
+  left: 0%;
+  xz-index: 8888;
+}
+.Eorzea {
+  position: absolute;
+  white-space: nowrap;
+  xz-index: 9999;
+}
+  .Eorzea label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-radius: 333px;
+  text-indent: -99999px;
+  cursor: pointer;
+}
+  .Eorzea label:hover {
+    background-color: dimgrey;
+  }
+</style>
+<body>
+  <div>
+    <div class="aozy">
+      <input type="radio" name="aozy" id="ss" checked>
+      <input type="radio" name="aozy" id="hh">
+      <input type="radio" name="aozy" id="hw">
+      <input type="radio" name="aozy" id="sd"> 
+    <img src="https://huiji-thumb.huijistatic.com/ff14/uploads/thumb/d/d2/Gridania.png/225px-Gridania.png"alt="">
+    <img src="https://huiji-thumb.huijistatic.com/ff14/uploads/thumb/8/8a/Uldah.png/225px-Uldah.png"alt="">
+    <img src="https://huiji-thumb.huijistatic.com/ff14/uploads/thumb/3/34/LimsaLominsa.png/225px-LimsaLominsa.png"alt="">
+    <img src="https://huiji-thumb.huijistatic.com/ff14/uploads/thumb/e/e1/Ishgard.png/225px-Ishgard.png"alt="">
+    <div class="Eorzea">
+      <label for="ss">1</label>
+      <label for="hh">2</label>
+      <label for="hw">3</label>
+      <label for="sd">4</label>
+    </div>
+  </div>
+</body>
+</html>
