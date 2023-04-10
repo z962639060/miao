@@ -7,44 +7,58 @@
   <title>Document</title>
 </head>
 <style>
-  * {
-    padding: 0;
-    margin: 0;
-  }
   html,body {
     margin: 0;
+    width: 100%;
     background-color: none;
-
+    --headerHeight:20px;
+    --mainwidth:10000px;
   }
-
-  div.menu {
-    background-color: rgb(35, 35, 35);
-    height: 30px;
-    position: relative;
-  } 
-  div.menu2 {
-      right:20px;
-      
-    }
-    span.space::after {
-          content: " | "
-    }
-
-  div.menu {
+  a {
     text-decoration: none;
-    display: inline-block;
-    color: rgb(182, 181, 179);
-    font-size: 12px;
-    line-height: 20px;
-    }
+          line-height:var(--headerHeight);
+          color:inherit;
+  }
   a:hover {
       color: rgb(222, 219, 219);
     }
-  header {
-    color :aqua;
+
+  
+  .header1{
+    background-color: rgb(6, 6, 6);
+    height: 25px;
+    position: relative;
+  } 
+
+  div.menu1 {
+        width: var(--mainwidth);
+        margin: auto;
+        position: relative;
+      }
+  span.space::after {
+          content: " | "
+        }   
+  span.menu2 {
+        position: absolute;
+        right:0;
+        display: inline-block;
   }
+
+  .header2{
+        position:static;
+        vertical-align:top;
+          }
+  div.menu {
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(153, 151, 145);
+    font-size: 12px;
+    line-height: 20px;
+    }
+
 </style>
 <body>
+  <div class="header1">
   <div class="menu">
   <div class="menu1">
     <a href="">小米官网</a><span class="space"></span>
@@ -60,15 +74,24 @@
     <a href="">下载app</a><span class="space"></span>
     <a href="">Select Location</a><span class="space"></span>
     <span class="menu2">
+    <span class="header2">
     <a href="">登录</a><span class="space"></span>
     <a href="">注册</a><span class="space"></span>
     <a href="">消息通知</a><span class="space"></span>
     <span class="shopping">
     <a href="">购物车</a><span class="space"></span>
+  </span>
+  </span>
   </div>
+</div>
 </div>
 <div>
   <header>
+    <div class="xuangou">
+    <span class="logo">
+      <a href="" class="logo"></a>
+    </span>
+    <span class="xuangou-menu">
     <a href="">Xiaomi手机</a>
     <a href="">Redmi手机</a>
     <a href="">电视</a>
@@ -78,8 +101,10 @@
     <a href="">路由器</a>
     <a href="">服务中心</a>
     <a href="">社区</a>
+  </span>
+  </div>
   </header>
-  <img src="" >
+
 </div>
 </body>
 </html>
