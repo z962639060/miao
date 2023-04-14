@@ -135,7 +135,7 @@ header nav .shopping div.product {
   width: 320px;
   height: 100px;
   background-color: white;
-  box-shadow: 0 0 5px gray;
+  box-shadow: 0 0 5px rgb(94, 94, 94);
   display: none;
 }
 
@@ -244,8 +244,8 @@ header nav .shopping div.product p {
 
 .top .nav form input {
   display: inline-block;
-  width: 250px;
-  height: 58px;
+  width: 200px;
+  height: 40px;
   padding: 10px;
   font-size: 14px;
   border: 1px solid rgba(0,0,0,0.3);
@@ -256,8 +256,8 @@ header nav .shopping div.product p {
   position: absolute;
   top: 0;
   display: inline-block;
-  width: 54px;
-  height: 58px;
+  width: 50px;
+  height: 40px;
   background: #fff;
   border: 1px solid rgba(0,0,0,0.3);
   border-left: none;
