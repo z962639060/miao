@@ -160,8 +160,8 @@ header nav .shopping div.product p {
   background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/img/logo-mi2.png);
   background-size: 50px;
   background-repeat: no-repeat;
-  margin-top: 20px;
-  margin-left:20px;
+  margin-top:25px;
+  margin-left:25px;
 }
 
 
@@ -410,21 +410,26 @@ header nav .shopping div.product p {
   bottom: 10px;
 }
 
+.content-swiper .index li {
+  padding: 0 5px;
+  display: inline-block;
 
-.content-swiper .right .index label {
+}
+
+.content-swiper  .index li label {
   display: inline-block;
   width: 10px;
   height: 10px;
   margin-right: 10px;
-  border: 1px solid gray;
+  border: 2px solid rgb(70, 69, 69);
   border-radius: 333px;
-  text-indent: -9999px;
+  text-indent: -1000px;
   cursor: pointer;
 }
 
 
-.content-swiper .right .index label:hover {
-  background-color: white;
+.content-swiper .index li label:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 
