@@ -176,7 +176,7 @@ header nav .shopping div.product p {
 
 .top .nav ul li {
   display: inline-block;
-  font-size: 12px;
+  font-size: 15px;
   margin-right: 20px;
   font-weight: bold;
 }
@@ -188,7 +188,7 @@ header nav .shopping div.product p {
 
 
 .top .nav ul li a:hover {
-  color: #ff6700;
+  color: #df5b04;
 }
 
 
