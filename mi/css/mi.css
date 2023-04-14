@@ -1,5 +1,5 @@
 
-.wrapper {
+.wop {
   width: 1230px;
   height: 100%;
   margin: 0 auto;
@@ -7,7 +7,7 @@
 }
 
 
-.wrapper > * {
+.wop > * {
   font-size: 16px;
 }
 
@@ -36,7 +36,7 @@ header nav span {
 header nav ul.left {
   width: 830px;
   position: absolute;
-  top: 10px;
+  top: 3px;
 }
 
 
@@ -44,7 +44,7 @@ header nav ul.left li {
   display: inline-block;
   font-size: 12px;
   height: 20px;
-  line-height: 20px;
+  line-height: -25px;
 }
 
 
@@ -85,9 +85,9 @@ header nav ul.left #download:hover span {
 
 
 header nav ul.right {
-  width: 240px;
+  width: 126px;
   position: absolute;
-  top: 10px;
+  top: 3px;
   left: 950px;
 }
 
@@ -103,7 +103,7 @@ header nav ul.right li a:hover {
 }
 
 
-header nav .shopcar {
+header nav .shopping {
   float: right;
   display: inline-block;
   width: 120px;
@@ -117,18 +117,18 @@ header nav .shopcar {
 }
 
 
-header nav .shopcar:hover {
+header nav .shopping:hover {
   color: orange;
   background-color: #fff;
 }
 
 
-header nav .shopcar:hover .product {
+header nav .shopping:hover .product {
   display: block;
 }
 
 
-header nav .shopcar div.product {
+header nav .shopping div.product {
   position: absolute;
   right: 0;
   z-index: 999;
@@ -140,7 +140,7 @@ header nav .shopcar div.product {
 }
 
 
-header nav .shopcar div.product p {
+header nav .shopping div.product p {
   color: black;
   margin-top: 30px;
 }
