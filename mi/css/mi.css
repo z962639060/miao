@@ -432,4 +432,64 @@ header nav .shopping div.product p {
   background-color: rgb(255, 255, 255);
 }
 
+.dop {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height:170px;
+  background-color: white;
+}
+.dop .left {
+  background-color: #d6d6d6;
+  width:20%;
+  height:100%;
+}
+.dop .left section {
+  width:82px;
+  height:85px;
+  float:left;
+  border: 1px solid #4b4641;
+  background-color: #424242;
+}
+.dop .left section a {
+  font-size: 10px;
+  padding:16px;
+  color:#b0aeac;
+}
+.dop .left section a img {
+  width:24px;
+  height:24px;
+  margin-left:10px;
+  margin-top:20px;
+}
+.dop .left section a span {
+  padding-left: 16px;
+}
+.dop .left section a:hover {
+  color: #e0e0e0;
+}
+.dop .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+}
 
+
+.dop .right ul li {
+  display: inline-block;
+  margin-left: 5px;
+}
+.dop .right ul li:hover {
+    transform: translateY(-2px);
+    transition: .2s;
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+  }
+
+
+
+.dop .right ul li img {
+  width: 316px;
+  height: 100%;
+}
