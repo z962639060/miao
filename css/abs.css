@@ -1,0 +1,73 @@
+* {
+  background-color: #0001;
+  box-shadow:inset 0 0 1px  red;
+}
+ html {
+  zoom: 2;
+ }
+.a1 {
+  position: relative;
+}
+.a1 section {
+  background-color: aquamarine;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+
+.a2 {
+  position: relative;
+}
+.a2 section {
+  background-color: palegoldenrod;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  height:100px;
+  transform: translate(-50%,-50%) ;
+}
+
+.a3 {
+  height: 100px;
+  font-size: 0;
+  text-align: center;
+}
+.a3::before {
+  content: 'a';
+  background-color: red;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.a3 section {
+  line-height: normal;
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.a4 {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.a4 section {
+  width: 60%;
+  margin: auto;
+}
+
+.a5 {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
