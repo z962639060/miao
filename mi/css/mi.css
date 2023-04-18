@@ -1,7 +1,6 @@
 
 .wop {
-  width: 1230px;
-  height: 100%;
+  width: 1226px;
   margin: 0 auto;
   font-size: 0;
 }
@@ -434,14 +433,14 @@ header nav .shopping div.product p {
 
 .dop {
   position: relative;
-  margin-top: 20px;
-  width: 100%;
+  width: 1226px;
   height:170px;
   background-color: white;
+  margin:10px auto;
 }
 .dop .left {
   background-color: #d6d6d6;
-  width:20%;
+  width:246px;
   height:100%;
 }
 .dop .left section {
@@ -475,7 +474,6 @@ header nav .shopping div.product p {
   width: 80%;
   height: 100%;
 }
-
 
 .dop .right ul li {
   display: inline-block;
