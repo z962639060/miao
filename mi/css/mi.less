@@ -1,39 +1,57 @@
+
 .wop {
   width: 1226px;
   margin: 0 auto;
   font-size: 0;
 }
+
+
 .wop > * {
   font-size: 16px;
 }
+
 header {
   width: 100%;
   height: 30px;
   background-color: #2b2a2a;
 }
+
+
 header nav {
   position: relative;
 }
+
+
 header nav a {
   color: #b0b0b0;
 }
+
+
 header nav span {
   color: #424242;
 }
+
+
 header nav ul.left {
   width: 830px;
   position: absolute;
   top: 3px;
 }
+
+
 header nav ul.left li {
   display: inline-block;
   font-size: 12px;
   height: 20px;
   line-height: -25px;
 }
+
+
 header nav ul.left li a:hover {
   color: white;
 }
+
+
 header nav ul.left #download span {
   position: absolute;
   z-index: 999;
@@ -49,6 +67,8 @@ header nav ul.left #download span {
   display: none;
   box-shadow: 0 0 3px gray;
 }
+
+
 header nav ul.left #download span img {
   width: 90px;
   height: 90px;
@@ -56,22 +76,32 @@ header nav ul.left #download span img {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+
 header nav ul.left #download:hover span {
   display: block;
 }
+
+
 header nav ul.right {
   width: 126px;
   position: absolute;
   top: 3px;
   left: 950px;
 }
+
+
 header nav ul.right li {
   display: inline-block;
   font-size: 12px;
 }
+
+
 header nav ul.right li a:hover {
   color: white;
 }
+
+
 header nav .shopping {
   float: right;
   display: inline-block;
@@ -84,13 +114,19 @@ header nav .shopping {
   color: #b0b0b0;
   cursor: pointer;
 }
+
+
 header nav .shopping:hover {
   color: orange;
   background-color: #fff;
 }
+
+
 header nav .shopping:hover .product {
   display: block;
 }
+
+
 header nav .shopping div.product {
   position: absolute;
   right: 0;
@@ -98,18 +134,24 @@ header nav .shopping div.product {
   width: 320px;
   height: 100px;
   background-color: white;
-  box-shadow: 0 0 5px #5e5e5e;
+  box-shadow: 0 0 5px rgb(94, 94, 94);
   display: none;
 }
+
+
 header nav .shopping div.product p {
   color: black;
   margin-top: 30px;
 }
+
+
 .top {
   width: 100%;
   height: 100px;
   position: relative;
 }
+
+
 .top .logo {
   display: inline-block;
   width: 100px;
@@ -117,9 +159,11 @@ header nav .shopping div.product p {
   background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/img/logo-mi2.png);
   background-size: 50px;
   background-repeat: no-repeat;
-  margin-top: 25px;
-  margin-left: 25px;
+  margin-top:25px;
+  margin-left:25px;
 }
+
+
 .top .nav {
   position: absolute;
   left: 240px;
@@ -127,21 +171,31 @@ header nav .shopping div.product p {
   width: 100%;
   display: inline-block;
 }
+
+
 .top .nav ul li {
   display: inline-block;
   font-size: 15px;
   margin-right: 20px;
   font-weight: bold;
 }
+
+
 .top .nav ul li a {
   color: #333;
 }
+
+
 .top .nav ul li a:hover {
   color: #df5b04;
 }
+
+
 .top .nav ul li:hover + #Product {
   display: block;
 }
+
+
 .top .nav ul #Product {
   position: absolute;
   z-index: 999;
@@ -153,36 +207,50 @@ header nav .shopping div.product p {
   display: none;
   background-color: white;
 }
+
+
 .top .nav ul #Product ul {
   margin: 36px 40px;
 }
+
+
 .top .nav ul #Product ul li {
   text-align: center;
   font-size: 10px;
   margin-right: 20px;
 }
+
+
 .top .nav ul #Product ul li div {
   color: #000;
   margin-top: 20px;
   margin-bottom: 12px;
 }
+
+
 .top .nav ul #Product ul li span {
   color: #ff7b21;
 }
+
+
 .top .nav form {
   position: absolute;
   left: 685px;
   top: -12px;
   font-size: 0;
 }
+
+
 .top .nav form input {
   display: inline-block;
   width: 200px;
   height: 40px;
   padding: 10px;
   font-size: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0,0,0,0.3);
 }
+
+
 .top .nav form #submit {
   position: absolute;
   top: 0;
@@ -190,27 +258,37 @@ header nav .shopping div.product p {
   width: 50px;
   height: 40px;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0,0,0,0.3);
   border-left: none;
   cursor: pointer;
 }
+
+
 .top .nav form #submit:active {
   background: #ff6700;
 }
+
+
 .content-swiper {
   width: 100%;
   position: relative;
 }
+
+
 .content-swiper .left {
   width: 20%;
   height: 100%;
   background-color: #a5a3a3;
   overflow: hidden;
 }
+
+
 .content-swiper .left ul {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+
 .content-swiper .left ul li {
   height: 42px;
   line-height: 42px;
@@ -218,18 +296,26 @@ header nav .shopping div.product p {
   color: #fff;
   cursor: pointer;
 }
+
+
 .content-swiper .left ul li::after {
   content: ">";
   font-weight: bold;
   position: absolute;
   left: 210px;
 }
+
+
 .content-swiper .left ul li:hover {
   background: #ff6700;
 }
+
+
 .content-swiper .left ul li:hover #Phone {
   display: block;
 }
+
+
 .content-swiper .left ul li #Phone {
   position: absolute;
   top: 0;
@@ -240,27 +326,39 @@ header nav .shopping div.product p {
   box-shadow: 0 0 5px gray;
   display: none;
 }
+
+
 .content-swiper .left ul li #Phone div {
   width: 200px;
   height: 60px;
   margin: 10px;
   padding: 10px;
 }
+
+
 .content-swiper .left ul li #Phone div:nth-child(n+7) {
   margin-left: 220px;
   margin-top: -420px;
 }
+
+
 .content-swiper .left ul li #Phone div img {
   vertical-align: middle;
 }
+
+
 .content-swiper .left ul li #Phone div span {
   vertical-align: middle;
   color: #333;
   font-size: 12px;
 }
+
+
 .content-swiper .left ul li #Phone div span:hover {
   color: #ff6700;
 }
+
+
 .content-swiper .right {
   position: absolute;
   right: 0;
@@ -269,6 +367,8 @@ header nav .shopping div.product p {
   height: 100%;
   background-color: lightgreen;
 }
+
+
 .content-swiper .right .slider {
   position: absolute;
   top: 0;
@@ -277,6 +377,8 @@ header nav .shopping div.product p {
   height: 100%;
   overflow: hidden;
 }
+
+
 .content-swiper .right .slider img {
   position: absolute;
   top: 0;
@@ -286,66 +388,78 @@ header nav .shopping div.product p {
   opacity: 0;
   transition: 2s;
 }
+
+
 .content-swiper .right input {
   display: none;
 }
+
+
 .content-swiper .right input:nth-child(1):checked ~ .picture img:nth-child(1),
 .content-swiper .right input:nth-child(2):checked ~ .picture img:nth-child(2),
 .content-swiper .right input:nth-child(3):checked ~ .picture img:nth-child(3),
 .content-swiper .right input:nth-child(4):checked ~ .picture img:nth-child(4) {
   opacity: 1;
 }
+
+
 .content-swiper .right .index {
   position: absolute;
   right: 50px;
   bottom: 10px;
 }
+
 .content-swiper .index li {
   padding: 0 5px;
   display: inline-block;
+
 }
-.content-swiper .index li label {
+
+.content-swiper  .index li label {
   display: inline-block;
   width: 10px;
   height: 10px;
   margin-right: 10px;
-  border: 2px solid #464545;
+  border: 2px solid rgb(70, 69, 69);
   border-radius: 333px;
   text-indent: -1000px;
   cursor: pointer;
 }
+
+
 .content-swiper .index li label:hover {
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
 }
+
 .dop {
   position: relative;
   width: 1226px;
-  height: 170px;
+  height:170px;
   background-color: white;
-  margin: 10px auto;
+  margin:10px auto;
 }
 .dop .left {
   background-color: #d6d6d6;
-  width: 246px;
-  height: 100%;
+  width:246px;
+  height:100%;
 }
 .dop .left section {
-  width: 82px;
-  height: 85px;
-  float: left;
+  width:82px;
+  height:85px;
+  float:left;
   border: 1px solid #4b4641;
   background-color: #424242;
 }
 .dop .left section a {
   font-size: 10px;
-  padding: 16px;
-  color: #b0aeac;
+  padding:16px;
+  color:#b0aeac;
 }
 .dop .left section a img {
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-  margin-top: 20px;
+  width:24px;
+  height:24px;
+  margin-left:10px;
+  margin-top:20px;
 }
 .dop .left section a span {
   padding-left: 16px;
@@ -360,44 +474,55 @@ header nav .shopping div.product p {
   width: 80%;
   height: 100%;
 }
+
 .dop .right ul li {
   display: inline-block;
   margin-left: 5px;
 }
 .dop .right ul li:hover {
-  transform: translateY(-2px);
-  transition: 0.2s;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+    transform: translateY(-2px);
+    transition: .2s;
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+  }
+
+
+
 .dop .right ul li img {
   width: 316px;
   height: 100%;
 }
+
 main {
   background-color: white;
 }
+
 main div.ImgOnes {
   padding-top: 25px;
   margin: 22px 0;
 }
+
 main div.Phone {
   width: 100%;
 }
+
 main div.Phone .top {
   height: 60px;
   color: #000;
 }
+
 main div.Phone .top .phone {
   float: left;
   font-size: 22px;
   line-height: 60px;
   font-weight: 200;
 }
+
 main div.Phone .top .more {
   float: right;
   font-size: 16px;
   line-height: 60px;
 }
+
 main div.Phone .top .more i {
   width: 12px;
   height: 12px;
@@ -409,29 +534,39 @@ main div.Phone .top .more i {
   background: #b0b0b0;
   color: #fff;
   vertical-align: 1px;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
+
 main div.Phone .top .more a {
   color: black;
 }
+
 main div.Phone .top .more a:hover {
   color: #ff6700;
+
+  >.iconfont:hover {
+    color: #ff6700;
+  }
 }
-main div.Phone .top .more a:hover > .iconfont:hover {
-  color: #ff6700;
-}
+
 main div.Phone .top .more .iconfont:hover {
   background-color: #ff6700;
 }
+
+
+
+
 main .Phone .content {
   margin-top: 20px;
   overflow: hidden;
 }
+
 main .Phone .content ul {
   height: 614px;
   width: 100%;
 }
+
 main .Phone .content ul li {
   display: block;
   float: left;
@@ -442,16 +577,19 @@ main .Phone .content ul li {
   margin-right: 16px;
   margin-bottom: 14px;
   text-align: center;
+
+  &:hover {
+    transform: translateY(-2px);
+    transition: .2s;
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+  }
 }
-main .Phone .content ul li:hover {
-  transform: translateY(-2px);
-  transition: 0.2s;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+
 main .Phone .content ul li:nth-child(5),
 main .Phone .content ul li:nth-child(9) {
   margin-right: 0;
 }
+
 main .Phone .content ul li div a div {
   text-align: center;
   font-size: 12px;
