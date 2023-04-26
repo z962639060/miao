@@ -154,3 +154,147 @@
     var n = Number(prompt())
     console.log(Math.pow(2,n))
 </script>
+
+<script id="ch0104/01">
+    var n=Number(prompt())
+    if(n>0) {console.log("positive")}
+    else if(n==0) {console.log('zero')}
+    else {console.log('negative')}
+</script>
+
+<script id="ch0104/02">
+    var n=Number(prompt())
+    if(n<0){console.log(-n)}
+    else{console.log(n)}
+</script>
+
+<script id="ch0104/03">
+    var n=Number(prompt())
+    if (n%2==0) {console.log('odd')}
+    else{console.log('even')}
+</script>
+
+<script id="ch104/04">
+    var char=Number(prompt())
+    var n=char.charCodAt(0)
+    if (n%2==0){console.log('NO')}
+    else{console.log('YES')}
+</script>
+
+<script id="ch104/05">
+    var x=Number(prompt("x"))
+    var y=Number(prompt("y"))
+    var z=Number(prompt("z"))
+    if (x>y){console.log('>')}
+    else if(x==y){console.log('=')}
+    else{console.log('<')}
+</script>
+
+<script  id="ch0104/06">
+    var n = Number(prompt())
+    if (n >= 10 && n < 100) {console.log(1)}
+    else {console.log(0)}
+</script>
+
+<script  id="ch0104/07">
+    var lucky = Number(prompt())
+    var encourage = Number(prompt())
+    if (lucky >= 10 || encourage >= 20) {console.log(1)}
+    else {console.log(0)}
+</script>
+
+<script  id="ch0104/08">
+    var n = Number(prompt())
+    if (n % 3 == 0 && n % 5 == 0) {console.log('yes')}
+    else {console.log('no')}
+</script>
+
+<script  id="ch0104/09">
+    var n = Number(prompt())
+    var over = falseif (n % 3 == 0) 
+    {over = trueconsole.log(3)}
+    if (n % 5 == 0) {over = trueconsole.log(5)}
+    if (n % 7 == 0) {over = trueconsole.log(7)}
+    if (!over) {console.log('n')}
+</script>
+
+<script  id="ch0104/10">
+    var s1 = Number(prompt())
+    var s2 = Number(prompt())
+    var count = 0
+    if(s1 < 60){count = count + 1}
+    if(s2 < 60){count = count + 1}
+    if(count == 2){console.log(1)}
+    else{console.log(0)}
+</script>
+
+<script  id="ch0104/11">
+    var n = Number(prompt())
+    if(n == 1 || n == 3 || n == 5){console.log('yes')}
+</script>
+<script  id="ch0104/12">
+    var distance = Number(prompt())
+    var byWalk = distance / 1.2
+    var byBicycle = distance / 3 + 50
+    if(byWalk < byBicycle){console.log('walk')}
+    else if(byWalk > byBicycle){console.log('Bike')}
+    else{console.log('ALL')}
+</script>
+
+<script  id="ch0104/13">
+    var x = Number(prompt())
+    var y  =Number(prompt())
+    if (x < 5) {y = -x + 2.5}
+    else if(x < 10){y = 2 - 1.5 * (x-3) * (x - 3)}
+    else{y = x / 2 - 1.5}console.log(y.toFixed(2))
+</script>
+
+<script  id="ch0104/14">
+    var weight = Number(prompt())
+    var emergency = prompt()
+    var price = 8
+    if(weight > 1000){price = price + Math.ceil((weight - 1000) / 500) * 4}
+    if(emergency == 'y'){price = price + 5}console.log(price)
+</script>
+
+<script  id="ch0104/15">
+    var a = Number(prompt())
+    var b = Number(prompt())
+    var c = Number(prompt())
+    var max = 0
+    if(a > max){max = a}
+    if(b > max){max = b}
+    if(c > max){max = c}console.log(max)
+</script>
+
+<script  id="ch0104/16">
+    var a = Number(prompt())
+    var b = Number(prompt())
+    var c = Number(prompt())
+    if (a+b>c&&a+c>b&&b+c>a){console.log('yes')}
+    else{console.log('no')}
+</script>
+
+<script id="ch0104/17">
+    var a=Number(prompt())
+    if (a%400==0||a%4==0&&a%100!==0){console.log('Y')}
+    else {console.log('N')}
+</script>
+
+<script id="ch0104/18">
+    var x = Number(prompt())
+    var y = Number(prompt())
+    if(x>-1&&x<1&&y>-1&&y<1){console.log('yes')}
+    else{console.log('no')}
+</script>
+
+<script id="ch0104/19">
+    var a = Number(prompt())
+    var b = Number(prompt())
+    var c = Number(prompt())
+    if (c=='+'){console.log(a+b)}
+    else if(c=='-'){console.log('a-b')}
+    else if(c=='*'){console.log(a*b)}
+    else if(c=='/'){if(b==0)console.log('DIVIDED BY ZERO!')}
+    else {console.log('INVALID OPERATOR!')}
+</script>
