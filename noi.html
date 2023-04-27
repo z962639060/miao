@@ -26,7 +26,7 @@
     var b = Number(prompt())
     var division = Math.trunc(a/b)
     var remainder = a % b
-    console.log(remainder)
+    console.log(division,remainder)
 </script>
 
 <script id="ch0103/05">
@@ -49,8 +49,8 @@
     var c = Number(prompt("c"))
     var d = Number(prompt("d"))
     var x = Number(prompt("x"))
-    var e = (a * x ** 3) + (b * x ** 2) + (c * x) + d
-    console.log(e.toFixed(7))
+    var e = ((a * x ** 3) + (b * x ** 2) + (c * x) + d).toFixed(7)
+    console.log(e)
 </script>
 
 <script id="ch0103/08">
@@ -89,7 +89,7 @@
     var a = n%10
     var b = (n-n%10)/10%10
     var c = (n-a-(b*10))/100%10
-    var d = a+b+c
+    var d = 'a'+'b'+'c'
     console.log(d)
 </script>
 
@@ -115,8 +115,8 @@
     var xb = Number(prompt())
     var ya = Number(prompt())
     var yb = Number(prompt())
-    var n = Math.sqrt(((xa-xb)**2)+(ya-yb)**2)
-    console.log(n.toFixed(3))
+    var n = Math.sqrt(((xa-xb)**2)+(ya-yb)**2).toFixed(3)
+    console.log(n)
 </script>
 
 <script id="ch0103/17">
@@ -131,7 +131,7 @@
     var c = Math.sqrt((x2-x3)**2+(y2-y3)**2)
     var r = (a+b+c)/2
     var s = Math.sqrt(r*(r-a)*(r-b)*(r-c))
-    console.log((s).toFixed(2))
+    console.log(s.toFixed(2))
 </script>
 
 <script id="ch0103/18">
@@ -174,7 +174,7 @@
 </script>
 
 <script id="ch0104/04">
-    var a=Number(prompt())
+    var a=(prompt())
     if (a.charCodAt()%2!==0){console.log('YES')}
     else{console.log('NO')}
 </script>
@@ -298,7 +298,11 @@
     if (c=='+'){console.log(a+b)}
     else if(c=='-'){console.log(a-b)}
     else if(c=='*'){console.log(a*b)}
-    else if(c=='/'){if(b==0)console.log('Divided by zero!')}
+    else if(c=='/'){
+        if(b==0){console.log('Divided by zero!')}
+    else{var d=a/b
+    console.log(d)}
+    }
     else {console.log('Invalid operator!')}
 </script>
 
@@ -336,7 +340,7 @@
         for(i=1;i<=n;i++){
             var age =Number(prompt('第'+i+'个学生年龄'))
             if (age >= 15 && age<=25){
-                n+=age
+                a += age
             }else{
                 alert('重新输入，输入年龄数错误')
             }
@@ -349,5 +353,5 @@
 </script>
 
 <script id="ch0105/02">
-    
+
 </script>
