@@ -17,15 +17,14 @@
     var a = Number(prompt())
     var b = Number(prompt())
     var c = Number(prompt())
-    var result = ( a + b) / c
-    var d = Math.floor(d)
+    var result = Math.trunc(( a + b) / c)
     console.log(result)
 </script>
 
 <script id="ch0103/04">
     var a = Number(prompt())
     var b = Number(prompt())
-    var division = Math.floor(a/b)
+    var division = Math.trunc(a/b)
     var remainder = a % b
     console.log(remainder)
 </script>
@@ -50,7 +49,7 @@
     var c = Number(prompt("c"))
     var d = Number(prompt("d"))
     var x = Number(prompt("x"))
-    var e = a * x ** 3 + b * x ** 2 + c * x + d
+    var e = (a * x ** 3) + (b * x ** 2) + (c * x) + d
     console.log(e.toFixed(7))
 </script>
 
@@ -62,7 +61,7 @@
 
 <script id="ch0103/09">
     var r = Number(prompt("r"))
-    console.log((r*2).toFixed(5),(2*3.14159*r).toFixed(4),(3.14159*r*r).toFixed(4))
+    console.log((r*2).toFixed(4),(2*3.14159*r).toFixed(4),(3.14159*r*r).toFixed(4))
 </script>
 
 <script id="ch0103/10">
@@ -90,7 +89,7 @@
     var a = n%10
     var b = (n-n%10)/10%10
     var c = (n-a-(b*10))/100%10
-    var d = a+b+C
+    var d = a+b+c
     console.log(d)
 </script>
 
@@ -116,7 +115,7 @@
     var xb = Number(prompt())
     var ya = Number(prompt())
     var yb = Number(prompt())
-    var n = Math.sqrt((xa-xb)**2+(ya-yb)**2)
+    var n = Math.sqrt(((xa-xb)**2)+(ya-yb)**2)
     console.log(n.toFixed(3))
 </script>
 
@@ -132,7 +131,7 @@
     var c = Math.sqrt((x2-x3)**2+(y2-y3)**2)
     var r = (a+b+c)/2
     var s = Math.sqrt(r*(r-a)*(r-b)*(r-c))
-    console,log(s)
+    console.log((s).toFixed(2))
 </script>
 
 <script id="ch0103/18">
@@ -170,15 +169,14 @@
 
 <script id="ch0104/03">
     var n=Number(prompt())
-    if (n%2==0) {console.log('odd')}
+    if (n%2!==0) {console.log('odd')}
     else{console.log('even')}
 </script>
 
 <script id="ch0104/04">
-    var char=Number(prompt())
-    var n=char.charCodAt(0)
-    if (n%2==0){console.log('NO')}
-    else{console.log('YES')}
+    var a=Number(prompt())
+    if (a.charCodAt()%2!==0){console.log('YES')}
+    else{console.log('NO')}
 </script>
 
 <script id="ch0104/05">
@@ -212,9 +210,12 @@
 <script  id="ch0104/09">
     var n = Number(prompt())
     var over = false
-    if (n % 3 == 0) {over = trueconsole.log(3)}
-    if (n % 5 == 0) {over = trueconsole.log(5)}
-    if (n % 7 == 0) {over = trueconsole.log(7)}
+    if (n % 3 == 0) {over = true 
+        console.log(3)}
+    if (n % 5 == 0) {over = true 
+        console.log(5)}
+    if (n % 7 == 0) {over = true 
+        console.log(7)}
     if (!over) {console.log('n')}
 </script>
 
@@ -230,8 +231,8 @@
 
 <script  id="ch0104/11">
     var n = Number(prompt())
-    if(n == 1 || n == 3 || n == 5){console.log('YES')}
-    else{console.log('NO')}
+    if(n == 1 || n == 3 || n == 5){console.log('NO')}
+    else{console.log('YES')}
 </script>
 
 <script  id="ch0104/12">
@@ -293,10 +294,60 @@
 <script id="ch0104/19">
     var a = Number(prompt())
     var b = Number(prompt())
-    var c = Number(prompt())
-    if (c=='+'){console.log('a+b')}
-    else if(c=='-'){console.log('a-b')}
-    else if(c=='*'){console.log('a*b')}
-    else if(c=='/'){if(b==0)console.log('DIVIDED BY ZERO!')}
-    else {console.log('INVALID OPERATOR!')}
+    var c = (prompt())
+    if (c=='+'){console.log(a+b)}
+    else if(c=='-'){console.log(a-b)}
+    else if(c=='*'){console.log(a*b)}
+    else if(c=='/'){if(b==0)console.log('Divided by zero!')}
+    else {console.log('Invalid operator!')}
+</script>
+
+<script id="ch0104/20">
+    var a = Number(prompt())
+    var b = Number(prompt())
+    var c = (prompt())
+    if (b**2==4*a*c){
+    var x1 = x2 = (-b + Math.sqrt(b*b-4*a*c))/(2*a)
+    console.log('x1=x2='+x1)}
+    else if (b**2>a*c){
+    var x1 =(-b + Math.sqrt(b*b-4*a*c))/(2*a)
+    var x2 =(-b - Math.sqrt(b*b-4*a*c))/(2*a)
+    console.log('x1='+x1+';x2='+x2)
+    }
+    else{
+    var x1=(-b / (2*a)).toFixed(5)+ '+' + (Math.sqrt(4*a*c-b*b) / (2*a).toFixed(5))+'i'
+    var x2=(-b / (2*a)).toFixed(5)+ '-' + (Math.sqrt(4*a*c-b*b) / (2*a).toFixed(5))+'i'
+    console.log('x1='=x1=';x2='+x2)
+    }
+</script>
+
+<script id="ch0104/21">
+    var a = (prompt('苹果数量'))
+    var b = (prompt('吃一个苹果的时间'))
+    var c = (prompt('过了多久'))
+    var n = a-Math.ceil(c/b)
+    console.log(n)
+</script>
+
+<script id="ch0105/01">
+    var n = Number(prompt('学生人数'))
+    if (n>=1&&n<=100){
+        var a = 0
+        for(i=1;i<=n;i++){
+            var age =Number(prompt('第'+i+'个学生年龄'))
+            if (age >= 15 && age<=25){
+                n+=age
+            }else{
+                alert('重新输入，输入年龄数错误')
+            }
+        }
+    }else{
+        alert('重新输入，输入人数错误')
+    }
+    var b = (a/n).toFixed(2)
+    console.log(b)
+</script>
+
+<script id="ch0105/02">
+    
 </script>
