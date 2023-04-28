@@ -49,8 +49,8 @@
     var c = Number(prompt("c"))
     var d = Number(prompt("d"))
     var x = Number(prompt("x"))
-    var e = ((a * x ** 3) + (b * x ** 2) + (c * x) + d).toFixed(7)
-    console.log(e)
+    var result = ((a * x ** 3) + (b * x ** 2) + (c * x) + d).toFixed(7)
+    console.log(result)
 </script>
 
 <script id="ch0103/08">
@@ -89,7 +89,7 @@
     var a = n%10
     var b = (n-n%10)/10%10
     var c = (n-a-(b*10))/100%10
-    var d = 'a'+'b'+'c'
+    var d = a+'+'+b+'+'+c
     console.log(d)
 </script>
 
@@ -112,8 +112,8 @@
 
 <script id="ch0103/16">
     var xa = Number(prompt())
-    var xb = Number(prompt())
     var ya = Number(prompt())
+    var xb = Number(prompt())
     var yb = Number(prompt())
     var n = Math.sqrt(((xa-xb)**2)+(ya-yb)**2).toFixed(3)
     console.log(n)
@@ -121,10 +121,10 @@
 
 <script id="ch0103/17">
     var x1 = Number(prompt("x1"))
-    var x2 = Number(prompt("x2"))
-    var x3 = Number(prompt("x3"))
-    var y1 = Number(prompt("y1"))
-    var y2 = Number(prompt("y2"))
+    var y1 = Number(prompt("x2"))
+    var x2 = Number(prompt("x3"))
+    var y2 = Number(prompt("y1"))
+    var x3 = Number(prompt("y2"))
     var y3 = Number(prompt("y3"))
     var a = Math.sqrt((x1-x2)**2+(y1-y2)**2)
     var b = Math.sqrt((x1-x3)**2+(y1-y3)**2)
@@ -174,8 +174,8 @@
 </script>
 
 <script id="ch0104/04">
-    var a=(prompt())
-    if (a.charCodAt()%2!==0){console.log('YES')}
+    var input=(prompt())
+    if (input.charCodAt()%2!==0){console.log('YES')}
     else{console.log('NO')}
 </script>
 
@@ -309,7 +309,7 @@
 <script id="ch0104/20">
     var a = Number(prompt())
     var b = Number(prompt())
-    var c = (prompt())
+    var c = Number(prompt())
     if (b**2==4*a*c){
     var x1 = x2 = (-b + Math.sqrt(b*b-4*a*c))/(2*a)
     console.log('x1=x2='+x1)}
@@ -389,6 +389,13 @@
     var n = 0
     var shu =Number(prompt())
     if(shu>=1&&shu<=10000){
-        for(var=i i<=)
+        for(var i=1; i<=total;i++){
+            var num =Number(prompt())
+            n += num
+        }
+    }   else{
+        alert()
     }
+    var a =(n/shu).toFixed(5)
+    console.log(n+''+a)
 </script>
