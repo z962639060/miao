@@ -276,12 +276,9 @@ class Queue {
 
 class LinkedList {
 
-  constructor(...initVals) {
+  constructor() {
     this.head = null
     this.tail = null
-    for (let item of initVals) {
-      this.head.append(item)
-    }
   }
 
   append(val) {
