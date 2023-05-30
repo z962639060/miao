@@ -232,11 +232,6 @@ class Stack{
 }
 
 
-  constructor(){
-    this._capacity = 16
-    this._lists = new Array(this._capacity).fill
-  }
-
 class Queue {
 
     constructor() {
