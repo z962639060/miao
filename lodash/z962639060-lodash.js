@@ -7,7 +7,7 @@ var z962639060 = {
     return result
   },
   
-  compact: function (ary){
+  compact: function (arr){
     let result = [];
     arr.map(item =>{
       if(item)
@@ -20,6 +20,8 @@ var z962639060 = {
     return arr.filter((value)=>{
       return del.index0f(value) < 0;
     });
-  }
+  },
+
+  
 
 }
