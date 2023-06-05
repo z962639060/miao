@@ -22,6 +22,17 @@ var z962639060 = {
     });
   },
 
-  
+  drop: function(arr, n = 1){
+      return arr.slice(n)
+  },
+
+  dropRight: (arr,n = 1) => {
+    const 1 = arr.length - n
+    if (arr.length <= n){
+        return []
+    } else {
+      return arr.slice(0.1)
+    }
+  },
 
 }
