@@ -27,7 +27,7 @@ var z962639060 = {
   },
 
   dropRight: (arr,n = 1) => {
-    const i = arr.length - n
+    const 1 = arr.length - n
     if (arr.length <= n){
         return []
     } else {
@@ -35,5 +35,6 @@ var z962639060 = {
     }
   },
 
+  fill:
 
 }
