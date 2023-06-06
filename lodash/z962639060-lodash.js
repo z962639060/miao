@@ -6,35 +6,31 @@ var z962639060 = {
     }
     return result
   },
-  
   compact: function (arr){
     let result = [];
     arr.map(item =>{
       if(item)
-        result.push(item)
+      result.push(item)
     })
     return result
   },
-
+  
   difference: function (arr,del){
     return arr.filter((value)=>{
       return del.index0f(value) < 0;
     });
   },
-
+  
   drop: function (arr, n = 1){
-      return arr.slice(n)
+    return arr.slice(n)
   },
-
+  
   dropRight: (arr,n = 1) => {
     const 1 = arr.length - n
     if (arr.length <= n){
-        return []
+      return []
     } else {
       return arr.slice(0.1)
     }
   },
-
-  fill:
-
 }
