@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #app{
+        width: 100%;
+        height: 100%;
+    }
+    .logo{
+        position: absolute;
+        top: 100%;
+        left: 10px;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(138, 153, 167);
+        border-radius:5px;
+    }
+    .logo .title{
+        position: relative;
+        top:5px;
+        height: 30px;
+        /*width:100%;*/
+        background-color: rgb(247, 247, 247);
+        margin: 0 2px;
+    }
+</style>
+</head>
+<body>
+    <div id="app">
+        <div class="logo" id="logo">
+            <div class="title" onmousedown="f1()"></div>
+        </div>
+    </div>
+    <script>
+        function f1(){
+            var logo = document.getElementById("logo");
+            var event = event || window.event;
+            var offsetX = event.offsetX
+            var offsetY = event.offsetY
+            let x = offsetX
+            let y = offsetY
+            document.onmousemove = function(){
+                var event = event || window.event;
+                var clientX = event.clientX
+                var clientY = event.clientY
+                move(logo,clientX - x,clientY - y)
+            }
+            document.onmouseup = function(){
+                document.onmousemove = null
+                document.onmouseup = null;
+            }
+        }
+        function move(loge,x,y){
+            var wina = document.documentElement.clientWidth || document.body.clientWidth;
+            var winb = document.documentElement.clientHeight || document.body.clientHeight;
+            //console.log(wina + "===" + winb)
+            wina = wina - 10 - logo.offsetWidth
+            winb = winb - 10 - logo.offsetHeight
+            if(x<=0){
+                x = 10
+            }
+            if(y<=0){
+                y = 10
+            // = 100
+            //console.log(event.clintY);
+            }   
+            if(x>wina){
+                x = wina
+            }
+            if(y>winb){
+                y = winb
+            }
+            //console.log(x,y);
+            logo.style.top = y + 'px'
+            logo.style.left = x + "px"
+        }
+    </script>
+</body>    
+</html> 
