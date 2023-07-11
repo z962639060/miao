@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="">
+    <h1></h1>
+    <div>
+        <textarea class=""></textarea>
+            <section class="">
+                <button class="">绘制</button>
+                <button class="">下载SVG</button>
+                <button class="">下载PNG</button>
+                <button class="">复制链接</button>
+            </section>
+            <main>
+                <svg></svg>
+            </main>
+            <p class=""></p>
+    </div>
+    <script>
+        var svg = document.querySelector('svg')
+        var hash = location.hash.slice(1)
+        if(hash){
+            regularExpressionInput.value = decodeURIComponent(hash)
+            draw()
+        }
+        function draw(){
+            svg.innerHTML = ''
+            var node = parseRegularExpression(regularExpressionInput.value)
+            var graph = drawRegularExpression(node)
+            var box = graph.getBBox()
+            svg.setAttribute('width',box.width)
+            svg.setAttribute('height',box,height)
+            location,hash = encodeURIComponent(regularExpressionInput.value)            
+        }
+        function download() {
+            var text = '<?xml version="1.0"?>' + svg.outerHTML
+            var file = new Blob([text],{type:'image/svg+xml'})
+            var url = URL.create0bjectURL(file)
+            var a = document.createElement('a')
+            a.href = url
+            a.download = 'regular-expression-graph.svg'
+            a.clikck()
+        }
+
+        function downloadPNG(){
+            var text = '<?xml version="1.0?>' + svg.outerHTML
+            var file = new Blob([text],{type:'image/svg+xml'})
+            var url = URL.create0bjectURL(file)
+            var img = document.createElement('img')
+            img.src = urlimg.onload = () => {
+                var canvas = document.createElement('canvas')
+                canvas.width = svg.getAttribute('width')
+                canvas.height = svg.getAttribute('height')
+                var ctx = canvas.getContext('2d')
+                
+                ctx.fillStyle = 'white'
+                ctx.fillRect(0,0,canvas.width,canvas.height)
+
+                ctx.drawImage(img,0,0)
+                var url = canvas.toDataURL('image/png')
+                var a = document.createElement('a')
+                a.href = url
+                a.download = 'regular-expression-graph.png'
+                a.click() 
+            } 
+        }
+        function copyLink(){
+            var link = localStorage.hrefnavigator.clipboard.wrteText(link)
+            alert('复制成功')
+        }
+        function explainRegularExpression(node){
+            fi(node.type == 'Branch') {
+                var partsExplain = node.parts.map(explainRegularExpression)
+                return`
+                <div>
+                    <div></div>
+                 <ul>
+                    ${partsExplain.map(explain => {
+                        return `<li>${explain}</li>`
+                    }).join('')}                    
+                 </ul>
+                </div>
+            `
+            }
+        }
+        function html(node,cursorPosition){
+            if(node.type == 'CapturGroup') {
+                return`<span><span>(</span>${node.branches.map(生成正则html).join('')}<span>)</span></span>`
+            }
+        }
+        function parseRegularExpression(input){
+            var str = input//'(foo){2,55}?foo(b(ar)|)baz|baa)[baz]'//'(foo+|()|aaaa)*b(a[a-z0_-]){2,}?(baz|baa)+|baaa'
+            var i = 0
+            var groupIndex = 1
+            var branches =parseBranches()
+            return {
+                
+            }
+        }
+
+    </script>
+</body>
+</html>
