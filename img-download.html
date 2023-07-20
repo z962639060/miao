@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  下载中的数量<input type="number" placeholder="默认为1最大为3">
+  <button>下载</button>
+  <script>
+    var input = document.querySelector("input")
+    var button = document.querySelector("button")
+    var quantity = 1
+    var cats
+    var catsJSON
+
+    get("https://xieranmaya.github.io/images/cats/cats.json", (data) => {
+      catsJSON = JSON.parse(data)
+      cats = catsJSON.map((it, idx) => it.fullUrl)
+    })
+
+    input.addEventListener("input", () => {
+      if(input.value > 3){
+        input.value = 3
+      }
+
+      quantity = input.value
+    })
+
+
+    button.addEventListener("click", () => {
+
+      if (cats.length == 0) {
+        cats = catsJSON.map((it, idx) => it.fullUrl)
+      }
+
+
+      for (let index = 0; index < quantity; index++) {
+        let cat = cats.pop()
+        get(cat, callb)
+      }
+    })
+
+
+    function callb(data) {
+      let nextCat = cats.pop()
+      if (nextCat) {
+        get(nextCat, callb)
+      }
+    }
+
+    function get(url, callback) {
+      var xhr = new XMLHttpRequest()
+      xhr.open("get", url, true)
+      xhr.send()
+      xhr.addEventListener("load", () => {
+        callback(xhr.responseText)
+      })
+    }
+  </script>
+</body>
+
+</html>
