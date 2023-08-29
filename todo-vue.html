@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .completed {
+        text-decoration: line-through;
+        opacity: 0.5;
+    }
+    h1{
+        color: steelblue;
+    }
+    input {
+        outline: none;
+        user-select:none;
+        background-color: whitesmoke;
+        border: 1px solid;
+    }
+    ul.visible-completed li:not(.completed) {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>todos</h1>
+        <div>
+            <input type="checkbox" class="quanbu" @click="toggleAll()" :checked="todos.length && todos.every(it => it.conleted)">
+            <input type="text" @keyup.enter="addTodo($event)" placeholder="what needs to be done?">
+        </div>
+        
+        <ul id="todo-list" :class="`visible-${visibleTodos}`">
+            <li :class="todo.conmpleted ? 'completed' : 'active'" v-for="'(todo,idx) of 计算出需要显示的(todos)">
+                <input data-index="0" type="checkbox" :checked="todo.completed" @change="changeTodoState(idx)">
+                <span v-show="editIdx !== idx" @dblclick="edit(idx)">{{ todo.content }}</span>
+                <input
+                  @keyup.enter="todo.content = $event.target.value.trim();editIdx = -1"
+                  @blur="todo.content = $event.target.value.trim();editIdx = -1"
+                  @keyup.escape="editIdx = -1"
+                  v-show="editIdx == idx"
+                  type="text"
+                  :value="todo.content"
+                  @keydown.escape="todo-"
+                >
+                <button @click="deleteTodo(idx)">&times;</button>
+            </li>
+        </ul>
+    </div>
+    <span><em>{{ todos.filter(it => !it.completed).length }}</em>个项目进行中</span>
+    <div class="alter">
+        <label><input type="radio" @click="visibleTodos = $event.target.value" value="all" name="visibleTodos" checked>全部</label>
+        <label><input type="radio" @click="visibleTodos = $event.target.value" value="active" name="visible-todos" > 未完成</label>
+        <label><input type="radio" @click="visibleTodos = $event.target.value" value="completed" name="visibleTodos">已完成</label>
+    </div>
+    <button @click="clearCompleted()" v-show="todos.some(it => it.completed)">清除</button>
+
+    <script src="./js/vue-2.7.14.js"></script>
+    <script>
+        var app = new Vue ({
+            el: '.container',
+      data: {
+        todos: JSON.parse(localStorage.getItem('todos')) ?? [{
+          name: '1',
+          done: false,
+          editState: -1,
+        }, 
+        {
+          name: '2',
+          done: true,
+          editState: -1,
+        }, {
+          name: '3',9 
+          done: false,
+          editState: -1,
+        }
+      ],
+        visibleTodos: 'all',
+      },
+
+      methods: {
+        addTodo(e) {
+          let value = e.target.value.trim()
+          if (value) {
+            this.todos.push({
+              name: value,
+              done: false,
+              editState: -1,
+            })
+          }
+          e.target.value = ''
+        },
+      
+      alter() {
+        if (this.visibleTodos == 'active') {
+          return this.todos.filter(it => it.done == false)
+        } else if (this.visibleTodos == 'completed') {
+          return this.todos.filter(it => it.done == true)
+        } else {
+          return this.todos
+        }
+      },
+
+      deleteTodo(idx) {
+        this.todos.splice(idx, 1)
+      },
+
+      changeState(idx) {
+        this.todos[idx].done = !this.todos[idx].done
+      },
+
+      clearTodo() {
+        this.todos = this.todos.filter(it => it.done == false)
+      },
+
+      quanbu() {
+        if (this.todos.every(it => it.done == true)) {
+          this.todos.forEach(it => it.done = false)
+        } else {
+          this.todos.forEach(it => it.done = true)
+        }
+      },  
+      
+      edit(idx) {
+        this.todos[idx].editState = 1
+        let input = document.querySelector('#input' + idx)
+        setTimeout(() => {
+          input.focus()
+        },1)
+      },
+    },
+      watch: { 
+        todos: {
+          deep: true,
+          handler: function() {
+            localStorage.setItem('todos', JSON.stringify(this.todos))
+          },
+        }
+      },    
+    })      
+    </script>
+</body>
+</html>
